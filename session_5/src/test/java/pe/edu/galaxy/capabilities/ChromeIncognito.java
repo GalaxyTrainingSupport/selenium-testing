@@ -17,14 +17,21 @@ public class ChromeIncognito {
 
 		WebDriverManager.chromedriver().setup();
 
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setAcceptInsecureCerts(true);
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setAcceptInsecureCerts(true);
+		
+		caps.setCapability("os", "OS X");
+		caps.setCapability("os_version", "Catalina");
+		caps.setCapability("browser", "Chrome");
+		caps.setCapability("browser_version", "latest");
+		caps.setCapability("browserstack.local", "false");
+		caps.setCapability("browserstack.selenium_version", "3.141.59");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-minimized");
 		options.addArguments("window-size=800,480");
 		
-		options.merge(capabilities);
+		options.merge(caps);
 		
 		WebDriver driver = new ChromeDriver(options);
 		
