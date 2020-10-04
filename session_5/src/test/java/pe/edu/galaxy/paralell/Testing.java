@@ -1,6 +1,7 @@
 package pe.edu.galaxy.paralell;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import pe.edu.galaxy.util.BaseTest;
 
