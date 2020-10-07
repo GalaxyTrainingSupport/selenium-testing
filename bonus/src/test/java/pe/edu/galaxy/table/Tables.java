@@ -1,4 +1,4 @@
-package pe.edu.galaxy;
+package pe.edu.galaxy.table;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Table {
+public class Tables {
 
 	public static void main(String[] args) {
-		
+
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.w3schools.com/html/html_tables.asp");
 		driver.manage().window().maximize();
@@ -21,7 +21,7 @@ public class Table {
 		List<WebElement> columnsList = null;
 
 		for (WebElement row : rowsList) {
-			System.out.println();
+			System.out.println(" ");
 			columnsList = row.findElements(By.tagName("td"));
 
 			for (WebElement column : columnsList) {
@@ -29,7 +29,7 @@ public class Table {
 			}
 
 		}
-		
+
 		driver.quit();
 	}
 }
