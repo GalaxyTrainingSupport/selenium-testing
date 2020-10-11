@@ -1,6 +1,6 @@
 package pe.edu.galaxy.exception;
 
-public class Exceptions {
+public class Exceptions_sa {
 
 	public static void main(String[] args) throws Exception {
 		withOutException();
@@ -9,7 +9,7 @@ public class Exceptions {
 	public static void dividir() {
 		System.out.println("Exception Handling");
 		int d = 1 / 0;
-		System.out.println("Test has been completed");
+		System.out.println("TEST HAS BEEN COMPLETED");
 	}
 
 	public static void withException() {
@@ -17,7 +17,7 @@ public class Exceptions {
 
 			System.out.println("Exception Handling");
 			int d = 1 / 0;
-			System.out.println("Test has been completed with Exception");
+			System.out.println("TEST HAS BEEN COMPLETED withException");
 
 		} catch (Exception e) {
 			System.out.println("Exception Bloque");
@@ -29,12 +29,12 @@ public class Exceptions {
 		}
 	}
 
-	public static void withOutException() throws Exception {
+	public static void withOutException() throws Exception{
 		try {
 
 			System.out.println("Exception Handling");
 			int d = 1 / 0;
-			System.out.println("Test has been completed with Out Exception");
+			System.out.println("TEST HAS BEEN COMPLETED withOutException");
 
 		} catch (Exception e) {
 			System.out.println("Exception Bloque");
@@ -45,5 +45,5 @@ public class Exceptions {
 			System.out.println("Finally block");
 		}
 	}
-
+	
 }

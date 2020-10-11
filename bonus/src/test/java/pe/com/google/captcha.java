@@ -1,4 +1,4 @@
-package com.google;
+package pe.com.google;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
