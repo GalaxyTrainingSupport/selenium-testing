@@ -1,5 +1,7 @@
 package pe.edu.galaxy.objectrepositity;
 
+import java.io.IOException;
+
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -17,7 +19,14 @@ public class ExcelFile {
 	}
 
 	public ExcelFile(String excelPath, String sheetName) {
-		
+		try {
+			workbook = new XSSFWorkbook(excelPath);
+			sheet = workbook.getSheet(sheetName);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println();
+			e.printStackTrace();
+			}
 	} 
 	
 	
