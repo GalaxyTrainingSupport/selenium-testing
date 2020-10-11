@@ -12,12 +12,19 @@ public class ExcelFile {
 	public static void main(String[] args) {
 		getRowCount();
 		getColCount();
-		getCellDataNumber(1,2);
+		getCellDataNumber(1,1);
+		getCellDataString(3,0);
 	}
 
+	public ExcelFile(String excelPath, String sheetName) {
+		
+	} 
+	
+	
 	public static int getRowCount() {
 		int rowCount = 0;
 		try {
+			//HSSFWorkbook .xls (office 97 - 2003)
 			workbook = new XSSFWorkbook("/Users/lruiz/Desktop/selenium-testng/session_7/data/data.xlsx");
 			sheet = workbook.getSheet("Hoja1");
 			rowCount = sheet.getPhysicalNumberOfRows();
