@@ -37,7 +37,7 @@ public class PropertiesFile {
 	public static void setProperties() {
 		try {
 			FileOutputStream output = new FileOutputStream(path + "/data/application.properties");
-			prop.setProperty("result", "Past Test");
+			prop.setProperty("Result", "Test has been completed");
 			prop.store(output, null);
 
 		} catch (Exception e) {

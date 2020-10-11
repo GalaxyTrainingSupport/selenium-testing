@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -24,7 +25,6 @@ public class PropertyBrowser {
 
 	@BeforeTest
 	public void launchBrowser() {
-
 		PropertiesFile.getProperties();
 		if (WebBrowser.equalsIgnoreCase("FIREFOX")) {
 			driver = new FirefoxDriver();
@@ -44,12 +44,13 @@ public class PropertyBrowser {
 	}
 
 	@Test
-	public void test() {
+	public void showTitle() {
 		System.out.println(driver.getTitle());
 		System.out.println("Test Completed");
+		PropertiesFile.setProperties();
 	}
 
-	@BeforeClass
+	@AfterSuite
 	public void tearDown() {
 		driver.quit();
 	}
