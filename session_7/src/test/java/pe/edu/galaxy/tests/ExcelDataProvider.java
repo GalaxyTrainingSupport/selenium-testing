@@ -3,7 +3,6 @@ package pe.edu.galaxy.tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -20,6 +19,7 @@ public class ExcelDataProvider {
 		driver = new ChromeDriver();
 	}
 
+	
 	@Test(dataProvider="DataLogin")
 	public void doLogin(String userName, String password ) throws InterruptedException {
 		System.out.println(userName + "--" + password );
@@ -28,6 +28,7 @@ public class ExcelDataProvider {
 		
 		driver.findElement(By.id("txtUsername")).sendKeys(userName);
 		driver.findElement(By.id("txtPassword")).sendKeys(password);
+		
 		//driver.findElement(By.name("Submit"));
 		//Assert.assertEquals("Test completed", "OrangeHRM", driver.getTitle());
 
