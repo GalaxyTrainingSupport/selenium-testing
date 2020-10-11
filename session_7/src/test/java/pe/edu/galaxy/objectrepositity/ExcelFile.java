@@ -1,6 +1,5 @@
 package pe.edu.galaxy.objectrepositity;
 
-import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -34,8 +33,6 @@ public class ExcelFile {
 		int rowCount = 0;
 		try {
 			//HSSFWorkbook .xls (office 97 - 2003)
-			workbook = new XSSFWorkbook("/Users/lruiz/Desktop/selenium-testng/session_7/data/data.xlsx");
-			sheet = workbook.getSheet("Hoja1");
 			rowCount = sheet.getPhysicalNumberOfRows();
 			System.out.println("Number of Rows -->" + rowCount);
 		} catch (Exception e) {
@@ -49,8 +46,6 @@ public class ExcelFile {
 	public static int getColCount() {
 		int colCount = 0;
 		try {
-			workbook = new XSSFWorkbook("/Users/lruiz/Desktop/selenium-testng/session_7/data/data.xlsx");
-			sheet = workbook.getSheet("Hoja1");
 			colCount = sheet.getRow(0).getPhysicalNumberOfCells();
 			System.out.println("Number of Cols -->" + colCount);
 		} catch (Exception e) {
@@ -64,8 +59,6 @@ public class ExcelFile {
 	public static double getCellDataNumber(int rownum, int colnum) {
 		double cellData=0;
 		try {
-		workbook = new XSSFWorkbook(path + "/data/data.xlsx");
-		sheet = workbook.getSheet("Hoja1");
 		cellData = sheet.getRow(rownum).getCell(colnum).getNumericCellValue();
 		System.out.println("Number double Rows: " + cellData);
 		}catch (Exception e) {
@@ -79,8 +72,6 @@ public class ExcelFile {
 	public static String getCellDataString(int rownum, int colnum) {
 		String cellData = null;
 		try {
-		workbook = new XSSFWorkbook(path + "/data/data.xlsx");
-		sheet = workbook.getSheet("Hoja1");
 		cellData = sheet.getRow(rownum).getCell(colnum).getStringCellValue();
 		System.out.println("Number String Rows: " + cellData);
 		}
