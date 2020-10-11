@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
+import pe.edu.galaxy.properties.PropertyBrowser;
+
 public class PropertiesFile {
 
 	static Properties prop = new Properties();
@@ -22,6 +24,7 @@ public class PropertiesFile {
 		try {
 			FileInputStream input = new FileInputStream(path + "/data/application.properties");
 			prop.load(input);
+			PropertyBrowser.WebBrowser = prop.getProperty("browser");
 			System.out.println("Browser -->" + prop.getProperty("browser"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
