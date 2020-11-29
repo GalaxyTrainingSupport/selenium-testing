@@ -16,9 +16,9 @@ public class captcha extends BaseTest {
 		
 		getDriver().manage().window().maximize();
 
-		getDriver().findElement(By.id("txtDni")).sendKeys("42296494");
+		getDriver().findElement(By.id("txtDni")).sendKeys("DNI");
 
-		getDriver().findElement(By.id("txtContrasena")).sendKeys("42296494");
+		getDriver().findElement(By.id("txtContrasena")).sendKeys("CLAVE");
 		
 		Thread.sleep(2000);
 		
